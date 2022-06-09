@@ -10,7 +10,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
-# installed apps settings
+
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -24,6 +24,7 @@ INSTALLED_APPS = [
     "mortgage.apps.MortgageConfig",
 ]
 
+
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
@@ -35,7 +36,9 @@ MIDDLEWARE = [
     "django.contrib.sites.middleware.CurrentSiteMiddleware",
 ]
 
+
 ROOT_URLCONF = "config.urls"
+
 
 TEMPLATES = [
     {
@@ -52,9 +55,10 @@ TEMPLATES = [
     }
 ]
 
+
 WSGI_APPLICATION = "config.wsgi.application"
 
-# database settings
+
 DATABASES = {
     'default': {
         'ENGINE': os.getenv('DB_ENGINE'),
@@ -66,7 +70,7 @@ DATABASES = {
     }
 }
 
-# Password validation
+
 AUTH_PASSWORD_VALIDATORS = [
     {"NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"},
     {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator"},
@@ -74,19 +78,25 @@ AUTH_PASSWORD_VALIDATORS = [
     {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator"},
 ]
 
-# Internationalization
+
 LANGUAGE_CODE = "ru"
+
 LANGUAGES = (("ru", _("Russian")), ("en", _("English")))
+
 TIME_ZONE = "Europe/Moscow"
+
 USE_I18N = True
+
 USE_L10N = True
+
 USE_TZ = True
 
-# Static files
+
 STATIC_URL = "/static/"
+
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
-# REST
+
 REST_FRAMEWORK = {
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
 }
