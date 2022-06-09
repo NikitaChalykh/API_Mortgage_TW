@@ -76,7 +76,7 @@ echo DB_PORT=5432 >> .env
 docker-compose up -d
 ```
 
-5. Запуск миграций, сбор статики, загрузка фикстур и запуск тестов:
+5. Запуск миграций, сбор статики и запуск тестов:
 ```bash 
 docker-compose exec web python manage.py migrate
 
