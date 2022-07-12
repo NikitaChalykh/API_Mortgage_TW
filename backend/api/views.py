@@ -10,7 +10,6 @@ class OfferViewSet(viewsets.ModelViewSet):
     queryset = MortgageOffer.objects.all()
     serializer_class = OfferSerializer
     filter_backends = (OfferFilterBackend,)
-    ordering_fields = ('payment', 'rate')
 
     def get_serializer_class(self):
         if self.action == 'list':
