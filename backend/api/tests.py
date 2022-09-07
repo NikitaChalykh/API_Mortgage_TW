@@ -8,7 +8,7 @@ from mortgage.models import MortgageOffer
 
 
 class ApiViewsTests(TestCase):
-    """Создаем тестовую модель артикула продукта и
+    """Создаем тестовую модель ипотечного предложения и
     тестовую модель пользователя."""
     @classmethod
     def setUpClass(cls):
